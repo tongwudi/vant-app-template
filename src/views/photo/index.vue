@@ -1,7 +1,5 @@
 <template>
-    <div class="photo">
-        <van-nav-bar title="图库" />
-    </div>
+  <div class="photo"></div>
 </template>
 
 <script>

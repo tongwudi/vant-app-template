@@ -1,9 +1,7 @@
-import axios from 'utils/axios'
+import { get, post} from 'utils/axios'
 
-export const getMv = data => {
-    return axios({
-        type: 'get',
-        url: '/personalized/mv',
-        data
-    })
+export default {
+    // getMv: data => get('/personalized/mv' + data),
+    getDeme: data => get('/demo', data),
+    postDeme: data => post('/demo', data)
 }

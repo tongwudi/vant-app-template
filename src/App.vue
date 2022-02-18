@@ -1,23 +1,25 @@
 <template>
-    <div id="app">
-        <keep-alive>
-            <router-view />
-        </keep-alive>
+  <div id="app">
+    <van-nav-bar v-if="$route.meta.navShow" :title="$route.meta.title" />
 
-        <footer-bar v-show="$route.meta.footShow" @changeBar="changeBar" />
-    </div>
+    <keep-alive>
+      <router-view />
+    </keep-alive>
+
+    <footer-bar v-show="$route.meta.footShow" @changeBar="changeBar" />
+  </div>
 </template>
 
 <script>
-import FooterBar from "components/FooterBar";
+import footerBar from "components/FooterBar";
 export default {
-    methods: {
-        changeBar(index) {
-            console.log(index);
-        }
-    },
-    components: {
-        "footer-bar": FooterBar
+  methods: {
+    changeBar(index) {
+      console.log(index);
     }
+  },
+  components: {
+    footerBar
+  }
 };
 </script>
